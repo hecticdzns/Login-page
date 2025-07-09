@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Info
+        </title>
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+                font-family: "poppins",sans-serif;
+                background-color: #003049;
+            }
+
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: url("login-page-background.png") no-repeat;
+                background-size:cover;
+                background-position:center;
+                overflow: hidden;
+            }
+
+            section{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background: url("login-page-background.png");
+                background-position: center;
+                background-size:cover;
+                animation: animateBg 50s linear infinite;
+            }
+
+            @keyframes animateBg
+            {
+                0%,100%
+                {
+                    transform: scale(1);
+                }
+                50%
+                {
+                    transform: scale(1.2);
+                }
+            }
+
+            span
+            {
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:4px;
+                height:4px;
+                background:#ffffff;
+                border-radius:50%;
+                box-shadow: 0 0 0 4px rgba(255,255,255,0.1),
+                0 0 0 8px rgba(255,255,255,0.1),
+                0 0 20px rgba(255,255,255,1);
+                animation: animate 3s linear infinite;
+            }
+
+            span::before{
+                content:'';
+                position:absolute;
+                top:50%;
+                transform: translateY(-50%);
+                width: 300px; 
+                height: 1px;
+                background: linear-gradient(90deg,#ffffff,transparent);
+            }
+
+         @keyframes animate
+         {
+            0%{
+                transform: rotate(315deg) translateX(0);
+                opacity: 1;
+            }
+            70%
+            {
+                opacity: 1;
+            }
+            100%
+            {
+                transform: rotate(315deg) translateX(-1000px);
+                opacity: 0;
+            }
+         }
+
+         span:nth-child(1)
+         {
+            top:0;
+            right:0;
+            left: initial;
+            animation-delay:0;
+            animation-duration:1s;
+         }
+
+         span:nth-child(2)
+         {
+            top:0;
+            right:80px;
+            left: initial;
+            animation-delay:0.2s;
+            animation-duration:3s;
+         }
+
+         span:nth-child(3)
+         {
+            top:80px;
+            right:0px;
+            left: initial;
+            animation-delay:0.4s;
+            animation-duration:2s;
+         }
+
+         span:nth-child(4)
+         {
+            top:0px;
+            right:180px;
+            left: initial;
+            animation-delay:0.6s;
+            animation-duration:1.5s;
+         }
+
+         span:nth-child(5)
+         {
+            top:0px;
+            right:400px;
+            left: initial;
+            animation-delay:0.8s;
+            animation-duration:2.5s;
+         }
+         
+         span:nth-child(6)
+         {
+            top:0px;
+            right:600px;
+            left: initial;
+            animation-delay:1s;
+            animation-duration:3s;
+         }
+
+         span:nth-child(7)
+         {
+            top:300px;
+            right:0px;
+            left: initial;
+            animation-delay:1.2s;
+            animation-duration:1.75s;
+         }
+
+         span:nth-child(8)
+         {
+            top:0px;
+            right:700px;
+            left: initial;
+            animation-delay:1.4s;
+            animation-duration:1.25s;
+         }
+
+         span:nth-child(9)
+         {
+            top:0px;
+            right:1000px;
+            left: initial;
+            animation-delay:0.75s;
+            animation-duration:2.25s;
+         }
+
+         span:nth-child(10)
+         {
+            top:0px;
+            right:450px;
+            left: initial;
+            animation-delay:2.75s;
+            animation-duration:2.25s;
+         }
+            .wrapper{
+                width:420px;
+                background:transparent;
+                border: 2px solid rgba(255, 255, 255, .2);
+                backdrop-filter: blur(20px);
+                box-shadow: 0px, 0px 10px rgba(0, 0, 0, .2);
+                color:#EFF1ED;
+                border-radius: 10px;
+                padding:35px 40px;
+
+            }
+            
+            h1{
+                font-size: 35px;
+                text-align:center;
+            }
+
+            .input-box{
+                position:relative;
+                width: 100%;
+                height: 50px;
+                margin: 30px 0;
+            }
+
+            .input-box input{
+                width:100%;
+                height:100%;
+                background:transparent;
+                border:none;
+                outline:none;
+                border:2px solid rgba(255, 255, 255, .2);
+                border-radius: 40px;
+                font-size: 20px;
+                padding: 20px 45px 20px 20px;
+		color:#ffffff;
+            }
+
+    
+
+            .input-box i{
+                position:absolute;
+                right: 20px;
+                top:50%;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+
+            .Remember-Forget{
+                display: flex;
+                justify-content: space-between;
+                font-size: 17.5px;
+                padding-top: 20px;
+                margin: -15px 0 15px;
+            }
+
+            .Remember-Forget label input{
+                accent-color: #fff;
+                margin-right:3px;
+            }
+
+           .Remember-Forget a{
+                color:#fff;
+                text-decoration:none;
+
+            } 
+
+            .Remember-Forget a:hover{
+                text-decoration: underline;
+            }
+
+            .Login{
+                margin-top: 15px;
+                width: 100%;
+                height: 40px;
+                background: #fff;
+                border:none;
+                outline:none;
+                border-radius: 40px;
+                box-shadow: 0,0,10 rgba(0, 0, 0, .1);
+                cursor:pointer;
+                font-size: 20px;
+                color: #333;
+                font-weight: 600;
+            }
+
+            .Login:hover{
+                color:#fff;
+                background: #9209d1;
+                transform: scale(1.1);
+            }
+
+            .Login:active{
+                transform: scale(1);
+            }
+            .Register-link{
+                font-size: 14.5px;
+                text-align: center;
+                margin:20px 0px 10px;
+            }
+
+            .Register-link p a{
+                color:#fff;
+                text-decoration: none;
+                font-weight: 600;
+                padding-left: 25px;
+            }
+
+            .Register-link p a:hover{
+                text-decoration:underline;
+                
+
+            }
+
+            .label{
+                Position:absolute;
+                top:15px;
+                left:20px;
+                transition: 1s;
+            }
+
+            .input-field:focus ~ .label,
+            .input-field:valid ~ .label
+            {
+                position:absolute;
+                top:-10px;
+                left:20px;
+                font-size:14px;
+                background-color:transparent;
+                border-radius:30px;
+                border:2px solid rgba(255, 255, 255, .2);
+                color:#fff;
+                padding: 0, 10px;
+
+            }
+             .lavel{
+                Position:absolute;
+                top:15px;
+                left:20px;
+                transition: 1s;
+            }
+
+            .input-field:focus ~ .lavel,
+            .input-field:valid ~ .lavel
+            {
+                position:absolute;
+                top:-10px;
+                left:20px;
+                font-size:14px;
+                background-color:transparent;
+                border-radius:30px;
+                border:2px solid rgba(255, 255, 255, .2);
+                color:#fff;
+                padding: 0, 10px;
+
+            }
+        </style>
+        <body>
+            <section>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+            <div class="wrapper">
+                <form>
+                    <h1>Login</h1>
+                        <div class="input-box">
+                            <input type="text"id="User" class="input-field" required>
+                            <label for "User" class="label">Username</label>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text"id="Password" class="input-field" required>
+                            <label for "Password" class="lavel">Password</label>
+                            <i class='bx bxs-lock'></i>
+                        </div>
+                        <div class="Remember-Forget">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forget Password</a>
+                        </div>
+                        <div>
+                            <button class="Login"type="submit" onclick="document.location='https://monkeytype.com/'">Login</button>
+                        </div>
+                        <div class="Register-link">
+                            <p>
+                                Don't have an Account ?
+                                <a href="#">Register</a>
+                            </p>
+                        </div>
+           
+                </form>  
+                      
+            </div>
+           
+           
+            
+    
+
+        </body>
+    </head>
+</html>
